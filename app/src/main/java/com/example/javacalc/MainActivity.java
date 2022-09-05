@@ -9,15 +9,13 @@ import androidx.constraintlayout.widget.Guideline;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    char operator = ' ';
-    String numberOne = "";
-    String numberTwo = "";
-    boolean isOperatorClicked = false;
+
     AppCompatTextView text_result, text_show_operation;
     AppCompatButton btn_plus, btn_minus, btn_multiply, btn_divid, btn_NumberSeven, btn_NumberEghit,
             btn_NumberNine, btn_clear, btn_NumberFour, btn_NumberFive, btn_NumberSix, btn_NumberOne,
@@ -28,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        OnClick();
+
+
     }
 
     public void initView() {
@@ -54,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         btn_clear = findViewById(R.id.btn_clear);
     }
 
+
+    public void onNumberClicked(View v) {
+        String newNumber = (Button) v
+    }
+
+/*
     private void OnClick() {
         btn_NumberZero.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -239,6 +244,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+*/
 
 }
